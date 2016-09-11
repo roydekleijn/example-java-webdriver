@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Example Java WebDriver Project',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.testng:testng:6.9.10'
+	compile 'org.seleniumhq.selenium:selenium-java:3.0.0-beta3'
+	compile 'org.hamcrest:hamcrest-all:1.3'
+}
